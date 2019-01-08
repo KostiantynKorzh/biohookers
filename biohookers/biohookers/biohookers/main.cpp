@@ -10,9 +10,26 @@
 
 using namespace std;
 
+/*class Array
+{
+public:
+    int a[];
+    Array();
+    void splitting();
+};
+
+void Array::splitting()
+{
+    a[]={"string"};
+    
+}
+*/
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    cout << "Hello, Kostes!!!!!!!\n";
-    cout << "Hello, Pidor!!!!!!!\n";
+    string a="denyspidor";
+    for (int i = 0; i<a.size(); i++)
+    {
+        cout<<a[i]<<endl;
+    }
     return 0;
 }
