@@ -20,14 +20,19 @@ int main(int argc, const char * argv[]) {
     
     int n;
     string s;
-    vector<char>v;
     cout << "Enter numbers of proteins" << endl;
     cin >> n;
     cout << "Enter protein chain";
     for(int i = 0; i <= n; i++)
     {
         getline(cin ,s);
-        cout << s << endl;   //проверка
+        cout << s << endl;     //проверка
+        vector<char>v(s.begin(), s.end());
+        for(int i = 0; i < v.size(); i++)
+        {
+            cout << v[i] << endl;
+        }
     }
+    
     return 0;
 }
