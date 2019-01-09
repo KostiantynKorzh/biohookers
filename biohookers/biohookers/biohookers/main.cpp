@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -15,13 +16,14 @@ using namespace std;
  */
 
 
-
 int main(int argc, const char * argv[]) {
     
-    string a="auuggauuagu";                 //splitting
-    for (int i = 0; i<a.size(); i++)
+    string s;
+    getline(cin, s);
+    vector<char>a(s.begin(), s.end());
+    for(int i = 0; i < a.size(); i++)
     {
-        cout<<a[i]<<endl;
+        cout << a[i] << endl;
     }
     return 0;
 }
