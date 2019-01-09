@@ -18,12 +18,16 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    int n;
     string s;
-    getline(cin, s);
-    vector<char>a(s.begin(), s.end());
-    for(int i = 0; i < a.size(); i++)
+    vector<char>v;
+    cout << "Enter numbers of proteins" << endl;
+    cin >> n;
+    cout << "Enter protein chain";
+    for(int i = 0; i <= n; i++)
     {
-        cout << a[i] << endl;
+        getline(cin ,s);
+        cout << s << endl;   //проверка
     }
     return 0;
 }
