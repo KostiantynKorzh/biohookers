@@ -31,8 +31,62 @@ int main(int argc, const char * argv[]) {
         for(int i = 0; i < v.size(); i++)
         {
             cout << v[i] << endl;
+            
         }
     }
-    
+    /* сравнивание матриц будем делать через двумерные вектора
+     
+     
+     
+     
+     vector< vector <int> > vvi;
+     //... initial
+     for(vector<vector<int> >::iterator it = vvi.begin(); it != vvi.end(); ++it){
+     for(vector<int>::iterator it2 = (*it).begin(); it2 != (*it).end(); ++it2){
+     // ...out
+     }
+     }
+     
+     
+     
+     
+     
+     
+     #include <iostream>
+     #include <vector>
+     #include <algorithm>
+     #include <iterator>
+     #include <iomanip>
+     
+     int main()
+     {
+     const size_t row = 5;
+     const size_t col = 3;
+     std::vector<std::vector<int> > imatrix(row);
+     // Заполнение
+     for(size_t i = 0; i < row; ++i)
+     {
+     imatrix[i].resize(col);
+     for(size_t j = 0; j < col; ++j)
+     imatrix[i][j] = rand() % 666;
+     }
+     // Печать
+     std::for_each(imatrix.begin(), imatrix.end(), [](std::vector<int>& ivec)
+     {
+     std::for_each(ivec.begin(), ivec.end(), [](int i)
+     {
+     std::cout << std::left << std::setw(5) << i;
+     });
+     std::cout << std::endl;
+     });
+     system("pause");
+     return 0;
+     }
+     
+     
+     
+     
+     
+     */
     return 0;
 }
