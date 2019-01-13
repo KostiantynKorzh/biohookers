@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -15,24 +17,195 @@ using namespace std;
  &&&&&&&&&&&&&&&&&&&&&&&&&&__Есть идеи - пиши__&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
  */
 
+class Splitting
+{
+public:
+    string s;
+    vector<char>v;
+    void split();
+    void show();
+    Splitting(string s1);
+};
+
+Splitting::Splitting(string s1)
+{
+    s=s1;
+}
+
+void Splitting::show()
+{
+    for(int i = 0; i < v.size(); i++)
+    {
+        cout << v[i] << endl;
+    }
+}
+
+void Splitting::split()
+{
+       getline(cin ,s);
+        cout << s << endl;     //проверка
+        vector<char>v(s.begin(), s.end());
+        for(int i = 0; i < v.size(); i++)
+        {
+            //1cout << v[i] << endl;
+            v.push_back(v[i]);
+            
+        }
+}
+
 
 int main(int argc, const char * argv[]) {
     
-    int n;
+    int n, k;
     string s;
-    cout << "Enter numbers of proteins" << endl;
+    cout << "Enter number of proteins" << endl;
     cin >> n;
-    cout << "Enter protein chain";
-    for(int i = 0; i <= n; i++)
+    cout << "Enter protein chains" << endl;
+    vector<char>v1;
+    vector<char>v2;
+    vector<char>v3;
+    vector<char>v4;
+    vector<char>v5;
+    Splitting a(s);
+    a.split();
+    a.show();
+
+    /*for(int i = 0; i <= n; i++)
     {
         getline(cin ,s);
         cout << s << endl;     //проверка
         vector<char>v(s.begin(), s.end());
         for(int i = 0; i < v.size(); i++)
         {
-            cout << v[i] << endl;
+            //1cout << v[i] << endl;
+            v1.push_back(v[i]);
             
         }
     }
+    for(int i = 0; i < v1.size(); i++)
+    {
+        cout << v1[i] << " ";
+        
+    }
+    for(int i = 0; i < v2.size(); i++)
+    {
+        cout << v2[i] << " ";
+        
+    }
+    for(int i = 0; i < v3.size(); i++)
+    {
+        cout << v3[i] << " ";
+        
+    }
+    for(int i = 0; i < v4.size(); i++)
+    {
+        cout << v4[i] << " ";
+        
+    }
+    for(int i = 0; i < v5.size(); i++)
+    {
+        cout << v5[i] << " ";
+        
+    }
+    */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    cout << "Enter length of proteins" << endl;
+    cin>>k;
+    char temp [n];
+    vector < vector <char> > v;
+    
+    for (int i = 0; i < n; i++){
+        getline (cin, s);
+        strcpy(temp, s.c_str());
+        for (int j = 0; j < k; j++){
+            v[i][j] = temp [j];
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<<<<<<< HEAD
+    }
+=======
+    } */
+    /* сравнивание матриц будем делать через двумерные вектора
+     
+     
+     
+     
+     vector< vector <int> > vvi;
+     //... initial
+     for(vector<vector<int> >::iterator it = vvi.begin(); it != vvi.end(); ++it){
+     for(vector<int>::iterator it2 = (*it).begin(); it2 != (*it).end(); ++it2){
+     // ...out
+     }
+     }
+     
+     
+     
+     
+     
+     
+     #include <iostream>
+     #include <vector>
+     #include <algorithm>
+     #include <iterator>
+     #include <iomanip>
+     
+     int main()
+     {
+     const size_t row = 5;
+     const size_t col = 3;
+     std::vector<std::vector<int> > imatrix(row);
+     // Заполнение
+     for(size_t i = 0; i < row; ++i)
+     {
+     imatrix[i].resize(col);
+     for(size_t j = 0; j < col; ++j)
+     imatrix[i][j] = rand() % 666;
+     }
+     // Печать
+     std::for_each(imatrix.begin(), imatrix.end(), [](std::vector<int>& ivec)
+     {
+     std::for_each(ivec.begin(), ivec.end(), [](int i)
+     {
+     std::cout << std::left << std::setw(5) << i;
+     });
+     std::cout << std::endl;
+     });
+     system("pause");
+     return 0;
+     }
+     
+     
+     
+     
+     
+     */
     return 0;
 }
