@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -18,12 +20,35 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    int n;
+    int n, k;
     string s;
-    cout << "Enter numbers of proteins" << endl;
+    cout << "Enter number of proteins" << endl;
     cin >> n;
-    cout << "Enter protein chain";
-    for(int i = 0; i <= n; i++)
+    cout << "Enter length of proteins" << endl;
+    cin>>k;
+    char temp [n];
+    vector < vector <char> > v;
+    cout << "Enter protein chains" << endl;
+    for (int i = 0; i < n; i++){
+        getline (cin, s);
+        strcpy(temp, s.c_str());
+        for (int j = 0; j < k; j++){
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*for(int i = 0; i <= n; i++)
     {
         getline(cin ,s);
         cout << s << endl;     //проверка
@@ -33,7 +58,7 @@ int main(int argc, const char * argv[]) {
             cout << v[i] << endl;
             
         }
-    }
+    } */
     /* сравнивание матриц будем делать через двумерные вектора
      
      
