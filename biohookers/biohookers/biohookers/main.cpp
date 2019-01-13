@@ -22,51 +22,67 @@ class Splitting
 public:
     string s;
     vector<char>v;
+    void enter();
     void split();
     void show();
+    Splitting();
     Splitting(string s1);
 };
+
+Splitting::Splitting()
+{
+    s="";
+    v.clear();
+}
 
 Splitting::Splitting(string s1)
 {
     s=s1;
 }
 
+void Splitting::enter()
+{
+    getline(cin ,s);
+    cout << s << " enter" << endl;
+}
+
+void Splitting::split()
+{
+    vector<char>v(s.begin(), s.end());
+    for(int i = 0; i < (int)v.size(); i++)
+    {
+        cout<< "1" << " ";
+        v.push_back(v[i]);
+    }
+    cout << " split" << endl;
+}
 void Splitting::show()
 {
     for(int i = 0; i < v.size(); i++)
     {
         cout << v[i] << endl;
     }
+    cout << " show" <<endl;
 }
 
-void Splitting::split()
-{
-       getline(cin ,s);
-        cout << s << endl;     //проверка
-        vector<char>v(s.begin(), s.end());
-        for(int i = 0; i < v.size(); i++)
-        {
-            //1cout << v[i] << endl;
-            v.push_back(v[i]);
-            
-        }
-}
+
+
 
 
 int main(int argc, const char * argv[]) {
     
     int n, k;
     string s;
-    cout << "Enter number of proteins" << endl;
+    /*cout << "Enter number of proteins" << endl;
     cin >> n;
     cout << "Enter protein chains" << endl;
     vector<char>v1;
     vector<char>v2;
     vector<char>v3;
     vector<char>v4;
-    vector<char>v5;
+    vector<char>v5;*/
     Splitting a(s);
+    a.enter();
     a.split();
     a.show();
 
