@@ -26,13 +26,14 @@ int main(int argc, const char * argv[]) {
     cin >> n;
     cout << "Enter length of proteins" << endl;
     cin>>k;
-    char temp [n];
-    vector < vector <char> > v;
-    cout << "Enter protein chains" << endl;
-    for (int i = 0; i < n; i++){
-        getline (cin, s);
-        strcpy(temp, s.c_str());
-        for (int j = 0; j < k; j++){
+    for(int i = 0; i <= n; i++)
+    {
+        getline(cin ,s);
+    //проверка
+        vector<char>v(s.begin(), s.end());
+        for(int i = 0; i < v.size(); i++)
+        {
+            cout << v[i] << endl;
             
         }
     }
@@ -48,17 +49,29 @@ int main(int argc, const char * argv[]) {
     
     
     
-    /*for(int i = 0; i <= n; i++)
-    {
-        getline(cin ,s);
-        cout << s << endl;     //проверка
-        vector<char>v(s.begin(), s.end());
-        for(int i = 0; i < v.size(); i++)
-        {
-            cout << v[i] << endl;
-            
-        }
-    } */
+    
+    /*  char temp [k];
+     char mas [n] [k];
+     //    vector < vector <char> > v;
+     for (int i = 0; i < n; i++){
+     cout << "Enter protein chain" << endl;
+     getline (cin, s);
+     strcpy(temp, s.c_str());
+     for (int j = 0; j < k; j++){
+     mas [i] [j] = temp [j];
+     }
+     }
+     */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* сравнивание матриц будем делать через двумерные вектора
      
      
