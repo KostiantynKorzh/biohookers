@@ -11,6 +11,7 @@ public:
     string s;
     vector<char>v;
     void split();
+    void out(int y);
     Splitting();
     Splitting(string s1);
 };
@@ -25,35 +26,54 @@ Splitting::Splitting(string s1)
 {
     s=s1;
 }
+
 void Splitting::split()
 {
-    getline(cin ,s);
+    getline(cin,s);
     vector<char>v(s.begin(), s.end());
     int vectorSize = (int)v.size();
-    for(int i = 0; i < vectorSize; i++)
-    {
+    for(int i = 0; i < vectorSize; i++){
+
         v.push_back(v[i]);
-        cout << v[i] << " ";
+
     }
+
+}
+void Splitting::out(int y){
+
+    cout<<v[y];
 
 }
 
 
-
-
-int main(int argc, const char * argv[]) {
-
+int main(int argc, const char * argv[])
+{
     int n, k;
     cout<< "Enter number of proteins"<<endl;
     cin>>n;
     cout<< "Enter length of proteins"<<endl;
     cin>>k;
     string s;
-    vector <Splitting> proteins (n+1);
-    for (int i = 0;i <= n;i++){
-    proteins[i].split();
-    cout<<endl;
+    int m [n] [k];
+    for (int i=0;i<n;i++){
+        for (int j=0; j<k;j++){
+        m [i] [j] = 0;
+        }
     }
+    vector <Splitting> proteins (n+1);
+    for (int i = 0; i <= n; i++){
 
+        proteins[i].split();
+
+    }
+    proteins[0].out(1);
+    //СРАВНИВАНИЕ БЕЛКОВ (НЕ ОЧЕНЬ РАБОТАЕт, проблема в вызове вектора из класса -- proteins[i].v[j]     и тому подобные вызовы; код комплируется но не работает, крашится на этой строке(скорее всего)
+/*    for (int i=0; i<n; i++){
+
+        for(int j=0; j<k; j++){
+
+            if(proteins[i].v[j]==proteins[i+1].v[j]) m[i+1] [i]++;
+        }
+    } */
     return 0;
 }
