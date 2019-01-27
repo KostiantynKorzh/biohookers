@@ -24,7 +24,6 @@ public:
     vector<char>v;
     void enter();
     void split();
-    void show();
     Splitting();
     Splitting(string s1);
 };
@@ -49,20 +48,13 @@ void Splitting::enter()
 void Splitting::split()
 {
     vector<char>v(s.begin(), s.end());
-    for(int i = 0; i < (int)v.size(); i++)
+    int vectorSize = (int)v.size();
+    for(int i = 0; i < vectorSize; i++)
     {
-        cout<< "1" << " ";
         v.push_back(v[i]);
+        cout << v[i] << " ";
     }
     cout << " split" << endl;
-}
-void Splitting::show()
-{
-    for(int i = 0; i < v.size(); i++)
-    {
-        cout << v[i] << endl;
-    }
-    cout << " show" <<endl;
 }
 
 
@@ -84,7 +76,6 @@ int main(int argc, const char * argv[]) {
     Splitting a(s);
     a.enter();
     a.split();
-    a.show();
 
     /*for(int i = 0; i <= n; i++)
     {
